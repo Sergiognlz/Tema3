@@ -36,7 +36,7 @@ public class Ejercicio4 {
 			}
 		} while (flag);
 
-	
+	Vocal.vocal()
 
 		sc.close();
 	}
