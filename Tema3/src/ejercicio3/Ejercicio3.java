@@ -1,14 +1,17 @@
-package ejercicio2;
+package ejercicio3;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Ejercicio2 {
+import ejercicio2.Numeros;
+
+public class Ejercicio3 {
 	/*
-	 * Escribe una función a la que se le pasen dos enteros y muestre todos los
-	 * números comprendidos entre ellos. Desde el método main() lee los dos números
-	 * enteros, los cuales deben introducirlos el usuario, y pásalos como parámetros
-	 * de entrada de la función.
+	 * Diseñar una función que recibe como parámetros dos números enteros y devuelve
+	 * el máximo de ambos. Diseña también una función main() que lea los dos números
+	 * de teclado (los pida al usuario) y llame a la función. Desde el método main()
+	 * se debe recoger el valor devuelto por la función en una variable y mostrar el
+	 * valor de dicha variable por pantalla..
 	 */
 	public static void main(String[] args) {
 		// creamos las variables para los dos números
@@ -33,7 +36,7 @@ public class Ejercicio2 {
 				System.out.println("El valor introducido no es válido.");
 				// limpiamos el escaner
 				sc.nextLine();
-				//declaramos la variable como true para que si salta el error repita el bucle.
+				// declaramos la variable como true para que si salta el error repita el bucle.
 				flag = true;
 			}
 		} while (flag);
@@ -54,11 +57,13 @@ public class Ejercicio2 {
 				flag = true;
 			}
 		} while (flag);
-		// llevamos los dos números a la función
-		Numeros.numeros(n1, n2);
+
+		// llamamos a la función e imprimimos en la pantalla.
+		System.out.println(Maximo.maximo(n1, n2));
 
 		// cerramos escaner
 		sc.close();
+
 	}
 
 }
