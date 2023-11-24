@@ -28,6 +28,6 @@ static public boolean vocal(char letra) {
 	}
 	}
 	
-	return(vocal);
+	return vocal;
 }
 }

@@ -13,6 +13,17 @@ public class Ejercicio6 {
 	 * = * radio2 * altura
 	 */
 	public static void main(String[] args) {
-		
+		// creamos las variables para las opciones 1 y 2, y los valores área y radio.
+		int funcion;
+		int area = 0, radio = 0;
+
+		// vamos a crear 4 bucles con try catch para comprobar que los valores de las
+		// variables introducidas están en el rango deseado.
+		switch()
+do {
+	try {
+		//pedimos
+	}
+}
 	}
 }
