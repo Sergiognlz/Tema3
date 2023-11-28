@@ -1,10 +1,12 @@
 package ejercicio4;
 
+import java.text.CharacterIterator;
+
 public class Vocal {
 static public boolean vocal(char letra) {
 	//declaramos booleano para saber si es vocal o no.
 	boolean vocal=false;
-	
+	letra=Character.toLowerCase(letra);
 	//creamos switch para recoger todos los caso. Las vocales y si no son vocales
 	switch(letra){
 	

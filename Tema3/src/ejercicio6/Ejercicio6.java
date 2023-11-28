@@ -18,7 +18,7 @@ public class Ejercicio6 {
 	public static void main(String[] args) {
 		// creamos las variables para las opciones 1 y 2, y los valores área y radio.
 		int opcion=0;
-		int area = 0, radio = 0;
+		double altura = 0, radio = 0;
 		//creamos escaner
 		Scanner sc=new Scanner(System.in);
 		
@@ -31,7 +31,8 @@ public class Ejercicio6 {
 do {
 	try {
 		//pedimos una opción
-		System.out.println("Introduce 1 para calcular el área o 2 para calcular el volumen de un cilindro.");
+		System.out.println("Introduce 1 para calcular el área de un cilindro.");
+		System.out.println("Introduce 2 para calcular el volumen de un cilindro.");
 		//guardamos la opción
 		opcion=sc.nextInt();
 	}catch(InputMismatchException e) {
@@ -40,6 +41,55 @@ do {
 		//limpiamos escaner.
 		sc.nextLine();
 	}
-}while(opcion!=1||opcion!=2);
+}while(opcion!=1&&opcion!=2);
+
+// creamos un try catch para comprobar que el número es correcto
+do {
+	try {
+		// pedimos el primer número
+		System.out.println("Introduce la altura del cilindro.");
+		// leemos el número.
+		altura = sc.nextDouble();
+		// reinicie el valor.
+	} catch (InputMismatchException e) {
+		// mensaje de error
+		System.out.println("El valor introducido no es válido.");
+		// limpiamos el escaner
+		sc.nextLine();
+	}
+} while (altura<=0);
+
+do {
+	// creamos otro try catch para el segundo número
+	try {
+		// pedimos segundo número
+		System.out.println("Introduce el radio del cilindro.");
+		// leemos el segundo número
+		 radio= sc.nextDouble();
+	} catch (InputMismatchException e) {
+		// mensaje error
+		System.out.println("El valor introducido no es válido.");
+		// limpiamos escaner
+		sc.nextLine();
+	}
+} while (radio<=0);
+
+
+
+//creamos un switch para cada opción.
+switch(opcion) {
+//caso 1 área
+case 1->{
+	//imprimimos pantalla
+	System.out.println("El área del cilindro es: "+(AreaVolumen.area(altura, radio))+" cm2");
+}
+
+case 2->{
+	System.out.println("EL volumen del cilindro es: "+(AreaVolumen.volumen(altura, radio))+" cm2");
+}
+
+}
+
+sc.close();
 	}
 }
