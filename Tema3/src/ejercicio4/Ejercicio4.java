@@ -13,7 +13,7 @@ public class Ejercicio4 {
 		// creamos variable donde guardar la letra
 		char letra='0';
 		// creamos boleano de confirmación del valor
-		boolean flag = true;
+		boolean flag = true, vocal;
 		// creamos escaner
 		Scanner sc = new Scanner(System.in);
 
@@ -36,7 +36,7 @@ public class Ejercicio4 {
 			}
 		} while (flag);
 
-	vocal=(Vocal.vocal(letra));
+	vocal=Vocal.vocal(letra);
 	
 	if(vocal) {
 		System.out.println("Es una vocal");

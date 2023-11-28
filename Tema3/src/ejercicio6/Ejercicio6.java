@@ -1,5 +1,8 @@
 package ejercicio6;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Ejercicio6 {
 	/*
 	 * Realiza una función que calcule y muestre el área y el volumen de un
@@ -14,16 +17,29 @@ public class Ejercicio6 {
 	 */
 	public static void main(String[] args) {
 		// creamos las variables para las opciones 1 y 2, y los valores área y radio.
-		int funcion;
+		int opcion=0;
 		int area = 0, radio = 0;
+		//creamos escaner
+		Scanner sc=new Scanner(System.in);
+		
+		
 
 		// vamos a crear 4 bucles con try catch para comprobar que los valores de las
 		// variables introducidas están en el rango deseado.
-		switch()
+		
+
 do {
 	try {
-		//pedimos
+		//pedimos una opción
+		System.out.println("Introduce 1 para calcular el área o 2 para calcular el volumen de un cilindro.");
+		//guardamos la opción
+		opcion=sc.nextInt();
+	}catch(InputMismatchException e) {
+		//mensaje de error
+		System.out.println("El valor introducido no es válido.");
+		//limpiamos escaner.
+		sc.nextLine();
 	}
-}
+}while(opcion!=1||opcion!=2);
 	}
 }
