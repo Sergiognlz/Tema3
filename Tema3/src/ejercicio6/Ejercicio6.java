@@ -74,21 +74,13 @@ do {
 	}
 } while (radio<=0);
 
-
-
-//creamos un switch para cada opción.
-switch(opcion) {
-//caso 1 área
-case 1->{
-	//imprimimos pantalla
-	System.out.println("El área del cilindro es: "+(AreaVolumen.area(altura, radio))+" cm2");
+if(opcion==1) {
+//imprimimos pantalla
+System.out.println("El área del cilindro es: " +(Opcion.opcion(altura, radio, opcion))+" cm2");
+}else {
+	System.out.println("El volumen del cilindro es: "+(Opcion.opcion(altura, radio, opcion))+" cm2");
 }
 
-case 2->{
-	System.out.println("EL volumen del cilindro es: "+(AreaVolumen.volumen(altura, radio))+" cm2");
-}
-
-}
 
 sc.close();
 	}
