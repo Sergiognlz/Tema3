@@ -8,7 +8,14 @@ public class Main {
 	
 public static void main(String[] args) {
 	
-	sc.close();	
+int opcion;
+opcion=menu();
+	
+	
+	
+	
+	
+	
 }
 
 public static int menu() {
