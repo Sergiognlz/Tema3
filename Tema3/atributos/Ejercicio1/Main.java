@@ -8,7 +8,7 @@ public class Main {
 	
 public static void main(String[] args) {
 	
-	
+	sc.close();	
 }
 
 public static int menu() {
@@ -58,4 +58,5 @@ public static double pideNumero() {
 	
 	return numero;
 }
+
 }
