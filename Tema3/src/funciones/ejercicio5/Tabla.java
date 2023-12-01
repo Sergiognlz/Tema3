@@ -1,4 +1,4 @@
-package ejercicio5;
+package funciones.ejercicio5;
 
 public class Tabla {
 	//creamos la función

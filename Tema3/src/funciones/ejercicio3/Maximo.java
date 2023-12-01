@@ -1,4 +1,4 @@
-package ejercicio3;
+package funciones.ejercicio3;
 
 public class Maximo {
 static public int maximo(int n1, int n2) {

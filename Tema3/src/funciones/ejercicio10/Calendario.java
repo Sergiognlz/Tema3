@@ -1,4 +1,4 @@
-package ejercicio10;
+package funciones.ejercicio10;
 
 public class Calendario {
 static public boolean calendario(int dia, int mes, int año) {

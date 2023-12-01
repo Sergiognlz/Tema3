@@ -1,4 +1,4 @@
-package ejercicio2;
+package funciones.ejercicio2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

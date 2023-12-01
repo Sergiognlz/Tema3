@@ -1,9 +1,10 @@
-package ejercicio10;
+package funciones.ejercicio10;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import ejercicio9.Calculadora;
+
 
 public class Ejercicio10 {
 	/*

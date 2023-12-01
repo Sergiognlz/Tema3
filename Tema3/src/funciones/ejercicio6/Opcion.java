@@ -1,4 +1,4 @@
-package ejercicio6;
+package funciones.ejercicio6;
 
 public class Opcion {
 static public double opcion(double altura, double radio, int opcion) {

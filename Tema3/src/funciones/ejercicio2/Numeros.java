@@ -1,4 +1,4 @@
-package ejercicio2;
+package funciones.ejercicio2;
 
 public class Numeros {
 	// recogemos los dos números en la función.

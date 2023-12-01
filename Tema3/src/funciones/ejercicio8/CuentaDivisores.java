@@ -1,6 +1,6 @@
-package ejercicio8;
+package funciones.ejercicio8;
 
-import ejercicio7.Primo;
+import funciones.ejercicio7.Primo;
 
 public class CuentaDivisores {
 	/*

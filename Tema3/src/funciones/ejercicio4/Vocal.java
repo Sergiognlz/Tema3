@@ -1,6 +1,6 @@
-package ejercicio4;
+package funciones.ejercicio4;
 
-import java.text.CharacterIterator;
+
 
 public class Vocal {
 static public boolean vocal(char letra) {

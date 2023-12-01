@@ -1,9 +1,8 @@
-package ejercicio3;
+package funciones.ejercicio3;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
-import ejercicio2.Numeros;
 
 public class Ejercicio3 {
 	/*
