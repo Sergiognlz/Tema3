@@ -1,4 +1,4 @@
-package Ejercicio1;
+package atributos.Ejercicio1;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

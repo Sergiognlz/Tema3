@@ -1,4 +1,4 @@
-package Ejercicio1;
+package atributos.Ejercicio1;
 
 public class Operaciones {
 
