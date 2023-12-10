@@ -1,4 +1,4 @@
-package atributos.Ejercicio1;
+package atributos.ejercicio1;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -10,12 +10,7 @@ public static void main(String[] args) {
 	
 int opcion;
 opcion=menu();
-	
-	
-	
-	
-	
-	
+
 }
 
 public static int menu() {
