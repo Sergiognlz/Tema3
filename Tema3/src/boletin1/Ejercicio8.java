@@ -59,8 +59,8 @@ public class Ejercicio8 {
 			// nos indicará que no se encuentra en la tabla
 			System.out.println("El número no se encuentra en la tabla");
 		}
-		System.out.println(Arrays.toString(tabla));
-		
+	
+		//cerramos escaner
 		sc.close();
 	}
 
