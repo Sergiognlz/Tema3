@@ -21,9 +21,11 @@ public class Ejercicio2 {
 		System.out.println("Introduce 5 números decimales");
 		//for para recorrer la tabla
 		for(int i=0;i<tabla.length;i++) {
+		
 			//pedimos al usuario por pantalla los 5 números
 			System.out.println("Introduce un número decimal para el valor "+(i+1));
 			//guardamos el valor
+
 			tabla[i]=sc.nextDouble();
 		}
 		//mostramos por pantalla el resultado
