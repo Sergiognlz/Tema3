@@ -18,7 +18,7 @@ public class Ejercicio8 {
 		// creamos variable num
 		int num;
 		//creamos variable posición
-		int pos=0;
+		String pos="";
 		//creamos un contador para saber cuantas veces aparece un número
 		int cont=0;
 		//creamos un booleano enc
@@ -31,7 +31,7 @@ public class Ejercicio8 {
 		// creamos for para rellenar la tabla
 		for (int i = 0; i < tabla.length; i++) {
 			// asignamos a la posición de la tabla un valor aleatorio entre 1 y 100
-			tabla[i] = rand.nextInt(1, 101);
+			tabla[i] = rand.nextInt(1, 11);
 		}
 		// pedimos al usuario un valor n
 		System.out.println("Introduce un número para comprobar si se encuentra en la tabla");
@@ -45,7 +45,7 @@ public class Ejercicio8 {
 				//pondrá el booleano econtrado a true
 				enc=true;
 				//y asignará a posición el valor donde se encuentr
-				pos=j;
+				pos+=j+", ";
 				//además contamos cuantas veces aparece
 				cont++;
 			
