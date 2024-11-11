@@ -15,6 +15,8 @@ public class Ejercicio6 {
 		// creamos las dos tablas
 		int tabla1[] = new int[6];
 		int tabla2[] = { 4, 8, 15, 16, 23, 42 };
+		//variable posición
+		int pos;
 		// variable contador para los aciertos
 		int cont = 0;
 		// creamos objeto random
@@ -27,16 +29,21 @@ public class Ejercicio6 {
 			// asignamos valores aleatorios a la tabla entre 1 y 49
 			tabla1[i] = rand.nextInt(1, 50);
 		}
+		Arrays.sort(tabla1);
+
 		// creamos un for para comparar los valores de las tablas
 		for (int j = 0; j < tabla1.length; j++) {
-			// comparamos los valores de las dos tablas
-			if (tabla1[j] == tabla2[j]) {
-				// incremento contador
+
+			pos = Arrays.binarySearch(tabla1, tabla2[j]);
+			if (pos > 0) {
 				cont++;
+
 			}
 		}
-		//mostramos el resultado por pantalla
-		System.out.println("Cantidad de aciertos: "+cont);
-		
+		// mostramos el resultado por pantalla
+		System.out.println("Boleto Premiado: " + Arrays.toString(tabla2));
+		System.out.println("Boleto jugado: " + Arrays.toString(tabla1));
+		System.out.println("Cantidad de aciertos: " + cont);
+
 	}
 }
