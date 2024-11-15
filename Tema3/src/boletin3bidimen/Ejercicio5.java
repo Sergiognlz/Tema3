@@ -12,41 +12,45 @@ public class Ejercicio5 {
 	 * mostrarse dichas sumas parciales sería:
 	 */
 	public static void main(String[] args) {
-		//creamos tabla
-		int tabla[][]=new int[4][5];
-		//variable suma
-		int suma;
-		//creamos objetos random
-		Random rand=new Random();
+		// creamos tabla
+		int tabla[][] = new int[4][5];
+		// variable suma columna
+		int sumaCol = 0;
+		// variable suma fila
+		int sumaFil = 0;
+		// variable suma total
+		int sumaTot = 0;
+		// creamos objetos random
+		Random rand = new Random();
+
+		// for para rellenar
+		for (int i = 0; i < tabla.length; i++) {
+			sumaFil = 0;
+			for (int j = 0; j < tabla[0].length; j++) {
+				// rellenamos
+				tabla[i][j] = rand.nextInt(100, 1000);
+				sumaFil += tabla[i][j];
+				System.out.print(tabla[i][j] + "\t");
+			}
 		
-		//for para rellenar
-		for(int i=0;i<tabla.length;i++) {
-			for(int j=0;j<tabla[0].length;j++) {
-				//rellenamos
-				tabla[i][j]=rand.nextInt(100,1000);
-			}
-		}
-		//for para mostrar
-		for(int i=0;i<tabla.length;i++) {
-			suma=0;
-			
-			for(int j=0;j<tabla[0].length;j++) {
-			//mostramos tabla
-				System.out.print(tabla[i][j]+"\t");
-				suma+=tabla[i][j];
-			
-					
-					System.out.print(" suma ");
-				
-			
-			}
-	
-			
-			System.out.println("Suma: "+suma);
+			sumaTot += sumaFil;
+			System.out.print(sumaFil);
 			System.out.println();
-			
+
 		}
-		
-		
+		// for para mostrar
+		for (int j = 0; j < tabla[0].length; j++) {
+			sumaCol = 0;
+
+			for (int i = 0; i < tabla.length; i++) {
+				sumaCol += tabla[i][j];
+			}
+			
+			System.out.print(sumaCol+"\t");
+		;
+
+		}
+	
+		System.out.print(+sumaTot);
 	}
 }
