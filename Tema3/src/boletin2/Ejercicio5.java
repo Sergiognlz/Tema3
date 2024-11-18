@@ -1,5 +1,6 @@
 package boletin2;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,7 +17,7 @@ public class Ejercicio5 {
 		int tabla[] = new int[1000];
 		// creamos variable num
 		int num;
-		// creamos variable posición
+		// creamos variable j para recorrer
 		// creamos un contador para saber cuantas veces aparece un número
 		int cont = 0;
 		// creamos un booleano enc
@@ -35,6 +36,8 @@ public class Ejercicio5 {
 		System.out.println("Introduce un número para comprobar si se encuentra en la tabla");
 		// guardamos el valor introducido
 		num = sc.nextInt();
+		// ordenamos tabla
+		Arrays.sort(tabla);
 		// creamos un for para leer la tabla y buscar el número
 		for (int j = 0; j < tabla.length; j++) {
 			// cuando el número sea igual al valor almacenado en la posición que recorre
