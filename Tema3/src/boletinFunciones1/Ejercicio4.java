@@ -32,6 +32,8 @@ public class Ejercicio4 {
 		clave = sc.nextInt();
 		// llamamos a la funcion e imprimimos el resultado
 		System.out.println(buscarTodos(t, clave));
+		//cierro escaner
+		sc.close();
 
 	}
 
