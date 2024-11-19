@@ -34,7 +34,7 @@ public class Ejercicio3 {
 				System.out.println("Introduce rango de números pares aleatorios");
 				// guardamos valor
 				fin = sc.nextInt();
-				assert (fin % 2 == 0) : "El valor fin debe ser par";
+				assert (fin> 0) : "El valor fin debe ser mayor de cero";
 				error = false;
 			} catch (AssertionError e) {
 				System.out.println(e.getMessage());
