@@ -33,7 +33,7 @@ public class Ejercicio2 {
 	}
 	static int[][] recorreColum(int tabla1[][]) {
 		//creamos la tabla donde volcaremos la tabla original
-		int tabla2[][]=new int[4][4]; 
+		int tabla2[][]=new int[tabla1.length][tabla1.length]; 
 		
 		//crearemos un for para recorrer la tabla por las columnas en vez de las filas
 		for(int j=0;j<tabla1[0].length;j++) {
