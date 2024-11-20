@@ -11,8 +11,7 @@ public class Ejercicio3 {
 	public static void main(String[] args) {
 		// creamos una bidimensional tabla
 		int tabla[][] = new int[4][4];
-		// int tabla[][] ={ { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14,
-		// 15, 16 } };
+		 //int tabla[][] ={ { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
 		// creamos booleano igual
 		boolean igual = false;
 
@@ -32,8 +31,26 @@ public class Ejercicio3 {
 	static boolean simetria(int[][] tabla) {
 		// creamos booleano que nos dirá si es simétrico
 		boolean asimetrico = false;
-
-		// recorremos la tabla bidimensional con un for para filas
+		//booleano de control
+		boolean enc=false;
+		int filas=0;
+		int columnas=0;
+		
+		
+		while(!asimetrico&&filas<tabla.length) {
+			while(!asimetrico&&columnas<tabla[filas].length) {
+				
+				if (tabla[filas][columnas] != tabla[columnas][filas]) {
+					// si en algún momento se cumple que no sea simétrica el booleano pasará a true
+					asimetrico = true;
+					
+					
+				}
+				columnas++;
+			}
+			filas++;
+		}
+		/*// recorremos la tabla bidimensional con un for para filas
 		for (int i = 0; i < tabla.length; i++) {
 			// for para columnas
 			for (int j = 0; j < tabla[i].length; j++) {
@@ -43,7 +60,7 @@ public class Ejercicio3 {
 					asimetrico = true;
 				}
 			}
-		}
+		}*/
 
 		// devolvemos booleano
 		return asimetrico;
