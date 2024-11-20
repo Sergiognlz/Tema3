@@ -11,24 +11,20 @@ public class Ejercicio4 {
 	public static void main(String[] args) {
 		// creamos tabla bidimensional
 		int tabla[][] = new int[3][3];
-		//int tabla[][]= {{1,2,3,},{5,6,7,},{9,10,11}};
+		// int tabla[][]= {{1,2,3,},{5,6,7,},{9,10,11}};
 		boolean magic;
-		
-		//guardamos el booleano que devolvemos en este booleano
-		magic=esMagica(tabla);
-		
-		//if para imprimir que según si es mágico o no
-		if(magic) {
-			//imprimimos es mágico
+
+		// guardamos el booleano que devolvemos en este booleano
+		magic = esMagica(tabla);
+
+		// if para imprimir que según si es mágico o no
+		if (magic) {
+			// imprimimos es mágico
 			System.out.println("Es Mágico... but magic is heresy");
-		}else {
-			//imprimimos que no lo es
+		} else {
+			// imprimimos que no lo es
 			System.out.println("No es Mágico...  but innocence proof nothing");
 		}
-		
-		
-		
-
 	}
 
 	static boolean esMagica(int tabla[][]) {
@@ -53,12 +49,12 @@ public class Ejercicio4 {
 			sumaFila = 0;
 			// recorremos columnas
 			for (int j = 0; j < tabla[i].length; j++) {
-				//sumamos 
+				// sumamos
 				sumaFila += tabla[i][j];
 			}
-			//comprueba la suma de la fila con la suma esperada
+			// comprueba la suma de la fila con la suma esperada
 			if (sumaFila != sumaEsp) {
-				//no será mágico
+				// no será mágico
 				magic = false;
 			}
 		}
@@ -72,9 +68,9 @@ public class Ejercicio4 {
 			for (int i = 0; i < tabla.length; i++) {
 				sumaColum += tabla[i][j];
 			}
-			//comprobamos que la suma de las columnas sea diferente de la suma esperada
+			// comprobamos que la suma de las columnas sea diferente de la suma esperada
 			if (sumaColum != sumaEsp) {
-				//no será mágico
+				// no será mágico
 				magic = false;
 			}
 		}
