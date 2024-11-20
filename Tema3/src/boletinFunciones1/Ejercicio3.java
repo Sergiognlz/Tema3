@@ -50,6 +50,8 @@ public class Ejercicio3 {
 		
 		//imprimos la tabla
 		System.out.println(Arrays.toString(rellenaPares(longitud, fin)));
+		//cerramos escaner
+		sc.close();
 	}
 
 	public static int[] rellenaPares(int longitud, int fin) {
