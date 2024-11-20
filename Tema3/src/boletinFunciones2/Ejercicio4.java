@@ -14,11 +14,15 @@ public class Ejercicio4 {
 		//int tabla[][]= {{1,2,3,},{5,6,7,},{9,10,11}};
 		boolean magic;
 		
+		//guardamos el booleano que devolvemos en este booleano
 		magic=esMagica(tabla);
 		
+		//if para imprimir que según si es mágico o no
 		if(magic) {
+			//imprimimos es mágico
 			System.out.println("Es Mágico... but magic is heresy");
 		}else {
+			//imprimimos que no lo es
 			System.out.println("No es Mágico...  but innocence proof nothing");
 		}
 		
