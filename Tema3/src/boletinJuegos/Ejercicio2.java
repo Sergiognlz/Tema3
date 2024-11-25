@@ -16,9 +16,7 @@ public class Ejercicio2 {
 		System.out.println(Arrays.toString(desordena(tabla)));
 	}
 
-	static int[] desordena(int[] tabla) {
-		// variable tabla desordenada
-		int tablaDes[] = new int[tabla.length];
+	static int[] desordena(int[] tabla) { 
 		// creamos variable auxiliar para guardar el valor que se intercambia
 		int aux;
 		// variable indice aleatorio
@@ -40,6 +38,6 @@ public class Ejercicio2 {
 		}
 
 		// devolvemos tabla
-		return tablaDes;
+		return tabla;
 	}
 }
