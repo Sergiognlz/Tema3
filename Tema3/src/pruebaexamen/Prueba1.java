@@ -33,7 +33,7 @@ public class Prueba1 {
 		// creamos objeto escaner
 		Scanner sc = new Scanner(System.in);
 		// rellenamos tablero con guiones
-		Arrays.fill(tableroMinado, '-');
+		Arrays.fill(tableroOculto, ' ');
 		// rellenamos la tabla llamando a la función que hace eso
 		tableroMinado = rellenaTablero();
 
@@ -45,11 +45,13 @@ public class Prueba1 {
 			do {
 				// try para controlar los valores
 				try {
+					System.out.println();
 					// mostramos tablero
-					System.out.println("Tablero oculto");
+					System.out.println("Tablero");
 					System.out.println(Arrays.toString(tableroOculto));
-					System.out.println("Tablero minado");
-					System.out.println(Arrays.toString(tableroMinado));
+					System.out.println();
+					//System.out.println("Tablero minado");
+					//System.out.println(Arrays.toString(tableroMinado));
 					// retorno de carro para que se vea mejor
 					System.out.println();
 					// pedimos al usuario que introduzca una posición
@@ -57,9 +59,18 @@ public class Prueba1 {
 					// guardamos posición
 					posicion = sc.nextInt();
 					assert posicion > 0 && posicion <= 20 : "El valor introducido no se encuentra entre 1 y 20.";
-
+					// aplicamos a posicion un -1 para que coincida con los índices de la tabla
+					posicion -= 1;
 					// si todo va bien error será false
 					error = false;
+				
+					if(tableroOculto[posicion]!=' ') {
+						System.out.println("Has introducido una posición ya revelada.");
+						error=true;
+					}
+				
+					// asignamos a la posición del tablero oculto la del tablero minado
+					tableroOculto[posicion] = tableroMinado[posicion];
 					// capturamos la aserción en caso de error
 				} catch (AssertionError e) {
 					// mensaje de error
@@ -79,10 +90,7 @@ public class Prueba1 {
 				}
 				// en caso de que no haya error salimos del bucle
 			} while (error);
-			// aplicamos a posicion un -1 para que coincida con los índices de la tabla
-			posicion -= 1;
-			// asignamos a la posición del tablero oculto la del tablero minado
-			tableroOculto[posicion] = tableroMinado[posicion];
+	
 
 			// controlamos que si revela una posición minada pierda
 			if (tableroOculto[posicion] == '*') {
@@ -93,6 +101,7 @@ public class Prueba1 {
 				//espacio
 				System.out.println();
 			}
+			//incrementamos jugadas para controlar que el jugador gane
 			jugadas++;
 		} while (!pierde&&jugadas!=14);
 		System.out.println("Tablero");
