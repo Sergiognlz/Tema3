@@ -127,8 +127,6 @@ public class Prueba1 {
 		char tableroMinado[] = new char[20];
 		// variable donde guardamos la posición aleatoria
 		int pos;
-		// creamos una variable para almacenar las pistas
-		char pista;
 		// creamos objeto random
 		Random rand = new Random();
 		Arrays.fill(tableroMinado, '0');
