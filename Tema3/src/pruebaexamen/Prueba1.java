@@ -90,9 +90,12 @@ public class Prueba1 {
 				pierde = true;
 				// mensaje que informa que pierdes y se acaba el juego
 				System.out.println("Fin del juego ¡Has perdido!");
+				//espacio
+				System.out.println();
 			}
 			jugadas++;
 		} while (!pierde&&jugadas!=14);
+		System.out.println("Tablero");
 		// espacio
 		System.out.println();
 		// mostramos tablero al final con la mina que has revelado
