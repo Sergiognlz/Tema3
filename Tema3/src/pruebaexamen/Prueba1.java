@@ -183,5 +183,13 @@ public class Prueba1 {
 		// devolvemos tabla tablero
 		return tableroMinado;
 	}
-
+/*para rellenar una tabla en 2 dimensiones con Array.fill(tabla) es necesario hacer un for para recorrer las filas
+ * 
+	for(int i=0;i<tabla.lenth.i++) {
+		Arrays.fill(tabla[i], '-');
+	}
+	*/
+	
+	
+	
 }
