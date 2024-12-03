@@ -23,7 +23,7 @@ public class Prueba1 {
 		// creamos tabla tablero minado
 		char tableroMinado[] = new char[20];
 		// creamos variable donde guardar la posición que preguntaremos al usuario
-		int posicion = 1;
+		int posicion=1;
 		//contador para las minas
 		int jugadas=0;
 		// booleano para controlar si el jugador pierde
@@ -35,7 +35,7 @@ public class Prueba1 {
 		// rellenamos tablero con guiones
 		Arrays.fill(tableroOculto, ' ');
 		// rellenamos la tabla llamando a la función que hace eso
-		tableroMinado = rellenaTablero();
+		tableroMinado = rellenaTablero( tableroMinado);
 
 		// creamos un do while para repetir todo el proceso de relevar las casillas del
 		// tablero
@@ -50,9 +50,9 @@ public class Prueba1 {
 					System.out.println("Tablero");
 					System.out.println(Arrays.toString(tableroOculto));
 					System.out.println();
-					//System.out.println("Tablero minado");
-					//System.out.println(Arrays.toString(tableroMinado));
-					// retorno de carro para que se vea mejor
+					System.out.println("Tablero minado");
+					System.out.println(Arrays.toString(tableroMinado));
+					//retorno de carro para que se vea mejor
 					System.out.println();
 					// pedimos al usuario que introduzca una posición
 					System.out.println("Introduce una posición (1-20)");
@@ -122,13 +122,12 @@ public class Prueba1 {
 	}
 
 	// vamos a crear una función para rellenar el tablero
-	static char[] rellenaTablero() {
-		// creamos una tabla donde estarán las minas y las pistas
-		char tableroMinado[] = new char[20];
+	static char[] rellenaTablero(char tableroMinado[]) {
 		// variable donde guardamos la posición aleatoria
 		int pos;
 		// creamos objeto random
 		Random rand = new Random();
+		//rellenamos la tabla con 0
 		Arrays.fill(tableroMinado, '0');
 		// for que recorrerá desde 0 a 6, con esto controlaremos que rellene la tabla
 		// con 6 minas
