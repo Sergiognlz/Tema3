@@ -35,7 +35,7 @@ public class Prueba1 {
 		// rellenamos tablero con guiones
 		Arrays.fill(tableroOculto, ' ');
 		// rellenamos la tabla llamando a la función que hace eso
-		tableroMinado = rellenaTablero( tableroMinado);
+		tableroMinado =rellenaTablero( tableroMinado);
 
 		// creamos un do while para repetir todo el proceso de relevar las casillas del
 		// tablero
