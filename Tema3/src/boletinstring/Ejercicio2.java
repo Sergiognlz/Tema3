@@ -33,7 +33,7 @@ public class Ejercicio2 {
 		
 	
 		//comprobamos medienta un while que ambas palabras no sean iguales
-		while(!(palabra.equalsIgnoreCase(contraseña))) {
+		while(!(palabra.equals(contraseña))) {
 			//asignamos el valor a pista llamando al método compareTo entre palabra y contreña
 			pista=palabra.compareTo(contraseña);
 			//si no la acierta se muestra por consola el error
