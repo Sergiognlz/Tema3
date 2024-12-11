@@ -21,6 +21,8 @@ public class Ejercicio4 {
 		
 		//imprimimos el resultado de llamar a la función cuentaEspacios
 		System.out.println(invertido(frase));
+		//cerramos escaner
+		sc.close();
 	}
 	static String invertido(String frase) {
 		//creamos variable espacios

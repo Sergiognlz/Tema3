@@ -20,6 +20,8 @@ public class Ejercicio3 {
 		
 		//imprimimos el resultado de llamar a la función cuentaEspacios
 		System.out.println(cuentaEspacios(frase));
+		//cerramos escaner
+		sc.close();
 	}
 	static int cuentaEspacios(String frase) {
 		//creamos variable espacios
