@@ -44,7 +44,7 @@ public class Ejercicio7 {
 
 		// creamos un while que repetirá hasta que el método de un número negativo(lo da
 		// cuando no encuentra la palabra)
-		while (pos > 0) {
+		while (pos >= 0) {
 			// si da positivo (lo encuentra) incrementamos contador
 			cont++;
 			// el nuevo índice
