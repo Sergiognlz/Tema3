@@ -20,7 +20,7 @@ public class Ejercicio8 {
 		// pedimos frase al usuario
 		System.out.println("Introduce una frase");
 		// guardamos la frase
-		frase = sc.nextLine();
+		frase = sc.next();
 		// convertimos la frase a array de String que guarda cada palabra de la frase en
 		// una posición del array
 		tablaFrase = frase.split(" ");

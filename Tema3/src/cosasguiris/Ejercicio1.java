@@ -1,7 +1,8 @@
+package cosasguiris;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class cosasguiris {
+public class Ejercicio1 {
 	/*
 	 * The size of the panel will be 3 x3.There are two players who will play by
 	 * turns.The first player to get 3 of his/her marks in a

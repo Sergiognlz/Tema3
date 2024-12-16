@@ -2,18 +2,13 @@ package boletinstring;
 
 import java.util.Scanner;
 
-public class Ejercicio10 {
+public class Ejercicio11 {
 	/*
-	 * Disponemos de la siguiente relación de letras mediante la cual es posible
-	 * codificar un texto, convirtiendo cada letra del conjunto 1, en su
-	 * correspondiente del conjunto 2. El resto de las letras no se modifican. Los
-	 * conjuntos se utilizan tanto para codificar mayúsculas como minúsculas,
-	 * mostrando siempre la codificación en minúsculas. Un ejemplo: la palabra
-	 * «PaquiTo» se codifica como «matqvko». Se pide realizar un programa
-	 * codificador, en el que se implemente la función: char codifica(char
-	 * conjunto1[],char conjunto2[], char c) que devuelve el carácter c codificado
-	 * según los conjuntos 1 y 2 que se le pasan.
+	 * Realizar un programa descodificador. La solución es tan sencilla como
+	 * utilizar la función diseñada en el ejercicio anterior intercambiando los
+	 * conjuntos entre sí.
 	 */
+	
 	public static void main(String[] args) {
 		// creamos tabla conjunto1
 		char conjunto1[] = { 'e', 'i', 'k', 'm', 'p', 'q', 'r', 's', 't', 'u', 'v' };
@@ -40,7 +35,7 @@ public class Ejercicio10 {
 			c =frase.charAt(i);
 			// llamamos a la función codifica y guardamos lo que devuelve en la variable
 			// cCod
-			cCod = codifica(conjunto1, conjunto2, c);
+			cCod = codifica(conjunto2, conjunto1, c);
 			// concatenamos en fraseCod
 			fraseCod += cCod;
 
