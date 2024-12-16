@@ -36,6 +36,9 @@ public class Ejercicio13 {
 	}
 	//función que compruebe que son anagramas
 	static boolean anagrama(String palabra1,String palabra2) {
+		boolean anagrama=false;
 		
+		//devolvemos booleano anagrama
+		return anagrama;
 	}
 }
