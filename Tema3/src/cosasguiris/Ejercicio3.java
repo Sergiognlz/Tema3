@@ -21,7 +21,7 @@ public class Ejercicio3 {
 		// pedimos frase al usuario
 		System.out.println("Introduce frase");
 		// guardamos frase
-		frase = sc.nextLine();
+		frase = sc.nextLine().toUpperCase();
 		
 		System.out.println("Introduce la distancia entre letras: ");
 		distancia = sc.nextInt();
@@ -30,7 +30,7 @@ public class Ejercicio3 {
 		for (int i = 0; i < frase.length(); i++) {
 			nuevaLetra=(char)(frase.charAt(i)+distancia);
 			// guardamos el la letra en el char
-			letra = frase.toUpperCase().charAt(i);
+			letra = frase.charAt(i);
 			// si la letra es Z...
 			if (nuevaLetra > 'Z') {
 				// letra será A
@@ -40,9 +40,9 @@ public class Ejercicio3 {
 				// lo deja igual
 				letra = ' ';
 				// si hay un 9
-			} else if (letra > '9') {
+			} else if (letra>=0&&letra <= '9') {
 				// letra será 0
-				letra = '0';
+				letra = (char)('0'+(nuevaLetra-frase.charAt(i)));
 
 				// si no hay z
 			} else {
