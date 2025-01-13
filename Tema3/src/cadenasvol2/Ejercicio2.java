@@ -30,13 +30,13 @@ public class Ejercicio2 {
 
 		// mensaje de jugador 2
 		System.out.println("Jugador 2 acierta la contraseña");
-		// do while para que no deje de pedir contraseña hasta que la acierte
+		// guardamos la palabra del jugador
+		palabraJugador = sc.next();
+		
+		// while para que no deje de pedir contraseña hasta que la acierte
+		while (!acierto) {
 
-		do {
-			// reiniciamos el escaner
-			// sc.next();
-			// guardamos la palabra del jugador
-			palabraJugador = sc.next();
+	
 			// si el jugador 2 acierta la contraseña... (comparamos con el método equals
 			if (palabraJugador.equals(contraseña)) {
 				// booleano acierto será true
@@ -47,19 +47,20 @@ public class Ejercicio2 {
 				if (palabraJugador.length() < contraseña.length()) {
 					// mensaje de que es menor
 					System.out.println("La palabra introducida es menor que la contraseña");
-				
+
 					// si la palabra del jugador2 es mayor que la contraseña
 				} else if (palabraJugador.length() > contraseña.length()) {
 					// mensaje de que es mayor
 					System.out.println("La palabra introducida es mayor que la contraseña");
-				
+
 				}
-				
+
 				System.out.println("Vuelve a intentarlo");
-			
+				// guardamos la palabra del jugador
+				palabraJugador = sc.next();
 			}
 			// si acierta saldrá del bucle
-		} while (!acierto);
+		}
 		// mensaje de fin de partida
 		System.out.println("Enhorabuena. Has acertado");
 		// cerramos escaner
