@@ -45,8 +45,6 @@ public class Ejercicio6 {
 		boolean palindroma = true;
 		// creamos variable fraseInvertida
 		String fraseInvertida = "";
-		// contador para evitar que salga de la cadena
-		int cont = 0;
 		// remplazamos los espacios blancos por cadena vacía
 		frase=frase.replace(" ", "");
 
@@ -56,19 +54,16 @@ public class Ejercicio6 {
 			// principio para invertirla
 			fraseInvertida += frase.charAt(i);
 		}
-		// ahora comparamos cambas cadenas con un while que repetirá mientras la frase
-		// sea palíndroma o recorra la cadena hasta el final
-		while (palindroma && cont < frase.length()) {
-			//comparamos los caracteres de ambas cadenas y si son iguales...
-			if(frase.charAt(cont)==fraseInvertida.charAt(cont)){
-			//incrementamos contador
-				cont++;
-				//en caso de no ser iguales...
-			}else {
-				//booleano palindroma será false
+		//comparamos ambas cadenas con .equals 
+			if((!frase.equals(fraseInvertida))){
+				//si no son  iguales palindroma será false
 				palindroma=false;
+			
+				
+			
 			}
-		}
+		
+		
 
 		// devolvemos palindroma
 		return palindroma;

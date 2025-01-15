@@ -42,23 +42,23 @@ public class Ejercicio7 {
 		int inicio = 0;
 		// creamos una variable de índice donde guardaremos el índice donde lo encuentra
 		int indiceEncontrado;
-		// recorremos la cadena hasta el final
-		for (int i = 0; i < frase.length(); i++) {
+	
 			// realizamos búsquedas de substring y
 			// guardamos en indiceEncontrado la posición en la que lo encuentra en cada
 			// iteración
 			indiceEncontrado = (frase.indexOf(palabra, inicio));
 			// comprobamos que si lo ha encontrado alguna vez en alguna posición positiva(de
 			// cero en adelante) entonces es que está en la frase
-			if (indiceEncontrado >= 0) {
+			while (indiceEncontrado >= 0) {
 				// entonces incrementa veces
 				veces++;
 				// y establece el nuevo inicio que será el valor actual del índice donde la encontró más la
 				// longitud de la palabra
 				inicio = indiceEncontrado + palabra.length();
-
+				//actualizamos el valor del indiceEncontrado
+				indiceEncontrado = (frase.indexOf(palabra, inicio));
 			}
-		}
+		
 
 		// devolvemos veces
 		return veces;
