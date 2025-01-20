@@ -16,17 +16,101 @@ public class ExamenAhorcado {
 	static String palabraPista = "";
 //variable global donde se amacenarán las letras usadas pero que no se encuentran en la palabra
 	static String noAcertadas = "";
-//objeto escaner global
+	// objeto escaner
 	static Scanner sc = new Scanner(System.in);
-//objeto random global
-	static Random rand = new Random();
 
 	public static void main(String[] args) {
+		// variable cadena
+		String palabra = "";
+		// variable letra
+		char letra;
+		// opción menú
+		int opcion;
+		// variable contador intentos
+		int intentos = 0;
 
+		// mensaje de inicio de juego
+		System.out.println("Bienvenido al Juego del Ahorcado. Tienes 7 intentos para adivinar una palabra");
+		System.out.println();
+
+		// primero generamos la palabra a adivinar
+		generaPalabra();
+
+		// inicializamos pista
+		iniPista();
+
+		// imprimimos pista
+		pintaPista();
+
+		// mientras el jugador no haya acertado la pista y tenga intentos...
+		while (!palabra.equals(palabraSecreta) && intentos < NUMINTENTOS) {
+
+			do {
+				// llamamos a la función menu y la guardamos en opción
+				opcion = menu();
+
+			} while (!(opcion >= 1 && opcion <= 2));
+
+			// con un switch cogemos la opción y hacemos lo que muestra el menú
+			switch (opcion) {
+
+			case 1 -> {
+				// do while para controlar que no repita una letra varias veces
+				do {
+					// pedimos la letra al usuario que buscaremos en la palabraSecreta
+					System.out.println("Introduce la letra a buscar");
+					// guardamos letra con next y charAt a 0 para quedarnos con el carácter en la
+					// posición 0
+					letra = sc.next().charAt(0);
+					// en el while hacemos un indexOf buscando la letra introducida en la cadena
+					// noAcertadas. Así evitamos repeticiones de letras
+				} while (noAcertadas.indexOf(letra) >= 0);
+				// llamamos a la función comprueba letra
+				compruebaLetra(letra);
+
+			}
+			case 2 -> {
+				// pedimos palabra al usuario y la compararemos con la palabraSecreta
+				System.out.println("Introduce la palabra");
+				// guardamos palabra
+				palabra = sc.next();
+				// llamamos a la función compruebaPalabra
+				compruebaPalabra(palabra);
+
+			}
+
+			}
+			// volvemos a imprimir pista
+			pintaPista();
+
+			// incrementamos intentos
+			intentos++;
+			// imprimimos número de intentos restantes
+			System.out.println("Número de intentos restantes: " + (NUMINTENTOS - intentos));
+			System.out.println();
+
+		}
+		// cuando sale del while se comprueba si el jugador ha acertado la palabra o con
+		// letras ha conseguido acertarla comparando palabraPista y palabraSecreta
+		if (palabraPista.equals(palabraSecreta)) {
+			// mensaje de enhorabuena
+			System.out.println("¡¡ENHORABUENA!! HAS ACERTADO");
+
+			// en caso contrario significará que se le han acabado los intentos
+		} else {
+			// mensaje de fin de juego
+			System.out.println("GAME OVER");
+
+		}
+		// cerramos escaner
+		sc.close();
 	}
 
 //almacena en palabraSecreta una palabra aleatoria de la tabla palabra
 	static void generaPalabra() {
+		// objeto random
+		Random rand = new Random();
+
 		// asignamos palabra aleatoria
 		palabraSecreta = palabra[rand.nextInt(0, palabra.length)];
 	}
@@ -94,6 +178,34 @@ public class ExamenAhorcado {
 			palabraPista += '-';
 		}
 
+	}
+
+	// función que comprueba si la cadena introducida es la misma que la palabra a
+	// acertar y de ser así la guarda en palabraPista
+	static void compruebaPalabra(String palabra) {
+		// si la cadena introducida coincide con la palabra a acertar
+		if (palabra.equals(palabraSecreta)) {
+			// guardamos en palabraPista la cadena
+			palabraPista = palabra;
+		} else {
+			// si no acierta mensaje de fallo
+			System.out.println("Has fallado la palabra");
+		}
+	}
+
+	// función que pinta las letras no acertadas y el contenido de la palabra pista
+	static void pintaPista() {
+
+		// recorremos la cadena noAcertadas e imprimimos en horizontal
+		for (int i = 0; i < noAcertadas.length(); i++) {
+			System.out.print("Letras ausentes en la palabra: ");
+			// imprimimos las letras no acertadas
+			System.out.print(noAcertadas.charAt(i) + " ");
+		}
+		System.out.println();
+		// imprimimos palabraPista
+		System.out.println("Pista: " + palabraPista);
+		System.out.println();
 	}
 
 }
