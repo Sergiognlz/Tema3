@@ -45,11 +45,11 @@ public class ExamenAhorcado {
 		// mientras el jugador no haya acertado la pista y tenga intentos...
 		while (!palabra.equals(palabraSecreta) && intentos < NUMINTENTOS) {
 
-			do {
+			
 				// llamamos a la función menu y la guardamos en opción
 				opcion = menu();
 
-			} while (!(opcion >= 1 && opcion <= 2));
+	
 
 			// con un switch cogemos la opción y hacemos lo que muestra el menú
 			switch (opcion) {

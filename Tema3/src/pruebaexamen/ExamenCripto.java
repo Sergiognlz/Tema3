@@ -64,7 +64,7 @@ public class ExamenCripto {
 			//otro for para columnas
 			for(int j=0;j<abecedario[i].length;j++) {
 				
-				if()
+			
 			}
 			
 		}
