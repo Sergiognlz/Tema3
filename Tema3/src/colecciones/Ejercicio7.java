@@ -25,17 +25,16 @@ public class Ejercicio7 {
 		String palabraIngles;
 		//variable opción
 		int opcion;
-		
-		
-		
 		//objeto escanner
 		Scanner sc=new Scanner(System.in);
 		
+		//creamos do while para que el menú se muestre por lo menos 1 vez
 		do {
 	
-		
 		//mostramos menú
+		System.out.println();
 		System.out.println("Diccionario Español-Inglés");
+		System.out.println();
 		System.out.println("Menú:");
 		System.out.println("1. Inserta palabra");
 		System.out.println("2. Busca palabra");
@@ -69,8 +68,10 @@ public class Ejercicio7 {
 			System.out.println("Introduce palabra en español a buscar para buscar su significado en inglés");
 			//guardamos la palabra
 			palabraEspañol=sc.next();
+			System.out.println();
 			//llamamos al método get y buscamos la palabra
-			diccionario.get(palabraEspañol);
+			System.out.println("Español: "+palabraEspañol+" -> Inglés: "+ diccionario.get(palabraEspañol));
+			
 		}
 		//cuando es 0
 		case 0->{
@@ -80,7 +81,7 @@ public class Ejercicio7 {
 		//si no es ninguna da las otras
 		default->{
 			//mensaje de error
-			System.err.println("La opción introducida");
+			System.err.println("La opción introducida no es válida");
 			
 		}
 		}
