@@ -24,8 +24,7 @@ public class Ejercicio9 {
 		int num;
 		//objeto escanner
 		Scanner sc=new Scanner(System.in);
-		//variable repetición
-		int repet=0;
+		
 		
 		//for para iterar 5 veces y guardar 5 números en el mapa
 		for(int i=0;i<5;i++) {
