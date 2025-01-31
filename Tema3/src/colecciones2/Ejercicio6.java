@@ -65,9 +65,9 @@ public class Ejercicio6 {
 				System.out.println("El nombre de la persona introducida ya existe en la libreta");
 				// en caso de que no exista
 			} else {
-				// creamos conjunto previamente declarado
+				// creamos conjunto vacío previamente declarado
 				numeros = new HashSet<>();
-				// lo añade
+				// añade el nombre y el conjunto vacío
 				libreta.put(nombre, numeros);
 				// mensaje de proceso existoso
 				System.out.println("El contacto se ha añadido con éxito");
