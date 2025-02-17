@@ -23,6 +23,6 @@ public class Ejercicio1 {
 			suma+=tabla[i];
 		}
 		//devolvemos la suma
-		return(suma);
+		return suma;
 	}
 }
